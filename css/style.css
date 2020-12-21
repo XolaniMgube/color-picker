@@ -1,7 +1,12 @@
 body {
   /* background: url(../images/color-fan-497004_1920.jpg); */
-  background-color: black;
+  background: url(../images/space.jpg);
   height: 100vh;
+  /* font-weight: bold; */
+}
+
+* {
+  font-weight: bold;
 }
 
 #main-container {
@@ -42,62 +47,96 @@ body {
   margin-bottom: 5px;
 }
 
-#brown {
-  background-color: brown;
+#color-circles div img {
+  width: 35px;
+  padding: 5px;
+  
 }
 
-#purple {
-  background-color: purple;
+#color-circles div img:active {
+  border: 2px solid black;
+  border-radius: 25px;
+}
+
+/* #color-circles div {
+  display: grid;
+  justify-self: center;
+  align-self: center;
+  padding: 10px;
+  border: 1px solid black;
+} */
+
+#maroon {
+  background-color: #c62930;
+  border: 1px solid black;
+  /* padding: 20px; */
+  /* margin: 20px; */
+}
+
+#violet {
+  background-color: #6327f4;
 }
 
 #black {
-  background-color: black;
+  background-color: #000000;
 }
 
 #white {
-  background-color: rgb(207, 207, 207);
+  background-color: #ffffff;
 }
 
 #orange {
-  background-color: orange;
+  background-color: #ee802f;
 }
 
 #yellow {
-  background-color: yellow;
+  background-color: #fef450;
 }
 
-#blue {
-  background-color: blue;
+#denim-blue {
+  background-color: #1d53ae;
 }
 
-#prussian {
-  background-color: prussian;
+#bahama-blue {
+  background-color: #285a7b;
 }
 
-#ecru {
-  background-color: ecru;
+#pancho {
+  background-color: #dab595;
 }
 
-#sky {
-  background-color: skyblue;
+#malibu {
+  background-color: #54c0f9;
 }
 
-#light-green {
-  background-color: lightgreen;
+#green-yellow {
+  background-color: #90fa4d;
 }
 
-#pink {
-  background-color: pink;
+#persian-rose {
+  background-color: #EA37B3;
 }
 
-#dark-green {
-  background-color: darkgreen;
+#fawn {
+  background-color: #e5aa70;
 }
 
-#dark-grey {
-  background-color: darkgrey;
+#eucalyptus {
+  background-color: #418D65;
 }
 
-#olive {
-  background-color: olive;
+#scarpa-flow {
+  background-color: #6f6975;
+}
+
+#horses-neck {
+  background-color: #6e5026;
+}
+
+#downy {
+  background-color: #69dad1;
+}
+
+#silver {
+  background-color: #c4c4c4;
 }

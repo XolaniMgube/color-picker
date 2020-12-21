@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .clicker {
+        width: 100px;
+        height: 100px;
+        background-color: blue;
+        outline: none;
+        cursor: pointer;
+        color:#FFF;
+        }
+
+        .hiddendiv {
+        display: none;
+        height: 200px;
+        background-color: green;
+        }
+
+        .clicker:focus+.hiddendiv {
+        display: block;
+        }
+
+        input {
+            background-color: red;
+        }
+    </style>
+
+</head>
+<body>
+    <div>
+        <div class="clicker" tabindex="1">Click me</div>
+        <div class="hiddendiv"></div>
+    </div>
+
+    <input type="checkbox">
+</body>
+</html>
