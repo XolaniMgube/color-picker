@@ -1,12 +1,14 @@
 body {
-  /* background: url(../images/color-fan-497004_1920.jpg); */
   background: url(../images/space.jpg);
   height: 100vh;
-  /* font-weight: bold; */
 }
 
 * {
   font-weight: bold;
+}
+
+a {
+  text-decoration: none;
 }
 
 #main-container {
@@ -15,62 +17,56 @@ body {
 }
 
 #reviews {
-  /* margin-bottom: 10px; */
   height: 50px;
-}
-
-#reviews div {
-  padding: 0 0 0 0;
-}
-
-#reviews div img {
-  padding: 0 2px;
-}
-
-#reviews p {
-  padding: 0;
-  margin: 0;
 }
 
 #prices {
   height: 50px;
 }
 
-#current-price {
-  font-size: 18px;
-}
-
-#color-circles div div {
-  width: 25px;
-  height: 25px;
-  border-radius: 25px;
-  margin-bottom: 5px;
+.not-bold {
+  font-weight: normal
 }
 
 #color-circles div img {
   width: 35px;
   padding: 5px;
+  margin: 5px 0;
+  cursor: pointer;
+}
+
+/* #color-circles div img:active {
+  border: 2px solid black;
+  border-radius: 25px;
+} */
+
+div.badge {
+  padding: 10px 25px;
+  font-size: 16px;
   
 }
 
-#color-circles div img:active {
-  border: 2px solid black;
-  border-radius: 25px;
+button.btn {
+  font-size: 12px;
+  font-weight: bold;
+  height: 40px;
+  margin: 0 15px
 }
 
-/* #color-circles div {
-  display: grid;
-  justify-self: center;
-  align-self: center;
-  padding: 10px;
-  border: 1px solid black;
-} */
+.modal-body img{
+  width: 35px;
+  cursor: pointer;
+}
 
-#maroon {
+@media only screen and (max-width: 575px) {
+  .px-3 {
+    padding-left: 0;
+  }
+}
+
+
+/* #maroon {
   background-color: #c62930;
-  border: 1px solid black;
-  /* padding: 20px; */
-  /* margin: 20px; */
 }
 
 #violet {
@@ -139,4 +135,4 @@ body {
 
 #silver {
   background-color: #c4c4c4;
-}
+} */
