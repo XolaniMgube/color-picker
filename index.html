@@ -127,8 +127,9 @@
 
     <div id="cart" class="d-flex align-items-center">
       <div class="badge rounded-pill bg-light text-dark border border-dark col-3 col-sm-1">0</div>
-      <button class="btn text-light bg-dark rounded-pill col-8 col-sm-6" data-bs-toggle="modal"
+      <button class="add-to-cart btn text-light bg-dark rounded-pill col-8 col-sm-6" data-bs-toggle="modal"
         data-bs-target="#exampleModal">Add To Cart</button>
+      <button class="checkout btn text-light bg-primary rounded-pill col-8 col-sm-6">Checkout</button>
     </div>
 
     <!-- Modal -->
@@ -139,13 +140,13 @@
             <p class="modal-title small text-center" id="exampleModalLabel">Please add the quantity of the items you have selected</p>
           </div>
           <div class="modal-body d-flex align-items-center justify-content-center">
-            <span class="small">Electric Red</span>
-            <img src="./images/minus.png" alt="minus" class="mx-4">
-            <span class="fs-2">0</span>
-            <img src="./images/plus.png" alt="plus" class="mx-4">
+            <span class="chosen-color small"></span>
+            <img src="./images/minus.png" alt="minus" class="minus mx-4">
+            <span class="selected-total fs-2">0</span>
+            <img src="./images/plus.png" alt="plus" class="plus mx-4">
           </div>
           <div class="modal-footer border-0">
-            <button type="button" class="btn btn-primary px-2 col-3">Agree</button>
+            <button type="button" class="agree btn btn-primary px-2 col-3" data-bs-dismiss="modal">Agree</button>
             <button type="button" class="btn btn-danger px-2 col-3" data-bs-dismiss="modal">Cancel</button>
           </div>
         </div>
