@@ -56,6 +56,15 @@ function addMinus() {
     // console.log(customFit)
   })
 
+  let checkout = document.querySelector(".checkout");
+  let details = document.querySelector('.detailsy').innerHTML = ''
+  checkout.addEventListener('click', () => {
+    details.innerHTML = details.innerHTML + "<p>Xolani</p>"
+    // details.innerHTML =  ` <div class="col-md-1 col-sm-1 col-2">
+    //     <img src="./images/scarpa-flow.png" class="color-image scarpa-flow" onclick="targetColorCircles(event)">
+    //   </div>`
+  })
+
   
 }
 
