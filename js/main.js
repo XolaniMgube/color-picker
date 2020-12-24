@@ -2,18 +2,17 @@
 
 "use strict";
 
-
-
-let colorImage = document.querySelectorAll('.color-image')
-let currentColor = document.querySelector('.current-color')
-// console.log(currentColor.innerText)
-console.log(colorImage[1].classList[1])
-
-// console.log(element)
-
-for (let i = 0; i < colorImage.length; i++) {
-  colorImage[i].addEventListener("click", () => {
-    colorImage[i].classList.toggle("toggle-border")
-    currentColor.innerText = colorImage[i].classList[1].toUpperCase()
-  })
+function targetColorCircles(event) {
+  let target = event.currentTarget;
+  let colorImage = document.querySelectorAll(".color-image");
+  let currentColor = document.querySelector(".current-color");
+  
+  for (let i = 0; i < colorImage.length; i++) {
+    if (colorImage[i] == target) {
+      colorImage[i].classList.toggle("toggle-border");
+      currentColor.innerText = target.classList[1].toUpperCase()
+    } else if (colorImage[i] != target) {
+      colorImage[i].classList.remove("toggle-border");
+    }
+  }
 }
