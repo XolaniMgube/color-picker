@@ -40,61 +40,48 @@
     </div>
 
     <div id="color-label">
-      <p class="small">COLOR: <span class="not-bold current-color"></span></p>
+      <p class="small">COLOR: <span class="current-color not-bold"></span></p>
 
     </div>
 
     <div class="row" id="color-circles">
       <div class="col-md-1 col-sm-1 col-2">
-        <!-- <div id="maroon"></div> -->
         <img src="./images/maroon.png" class="color-image maroon" onclick="targetColorCircles(event)">
       </div>
       <div class="col-md-1 col-sm-1 col-2">
-        <!-- <div id="violet"></div> -->
         <img src="./images/violet.png" class="color-image violet" onclick="targetColorCircles(event)">
       </div>
       <div class="col-md-1 col-sm-1 col-2">
-        <!-- <div id="black"></div> -->
         <img src="./images/black.png" class="color-image black" onclick="targetColorCircles(event)">
       </div>
       <div class="col-md-1 col-sm-1 col-2">
-        <!-- <div id="white"></div> -->
         <img src="./images/white.png" class="color-image white" onclick="targetColorCircles(event)">
       </div>
       <div class="col-md-1 col-sm-1 col-2">
-        <!-- <div id="orange"></div> -->
         <img src="./images/orange.png" class="color-image orange" onclick="targetColorCircles(event)">
       </div>
       <div class="col-md-1 col-sm-1 col-2">
-        <!-- <div id="yellow"></div> -->
         <img src="./images/yellow.png" class="color-image yellow" onclick="targetColorCircles(event)">
       </div>
       <div class="col-md-1 col-sm-1 col-2">
-        <!-- <div id="denim-blue"></div> -->
         <img src="./images/denim-blue.png" class="color-image denim-blue" onclick="targetColorCircles(event)">
       </div>
       <div class="col-md-1 col-sm-1 col-2">
-        <!-- <div id="bahama-blue"></div> -->
         <img src="./images/bahama-blue.png" class="color-image bahama-blue" onclick="targetColorCircles(event)">
       </div>
       <div class="col-md-1 col-sm-1 col-2">
-        <!-- <div id="pancho"></div> -->
         <img src="./images/pancho.png" class="color-image pancho" onclick="targetColorCircles(event)">
       </div>
       <div class="col-md-1 col-sm-1 col-2">
-        <!-- <div id="malibu"></div> -->
         <img src="./images/malibu.png" class="color-image malibu" onclick="targetColorCircles(event)">
       </div>
       <div class="col-md-1 col-sm-1 col-2">
-        <!-- <div id="green-yellow"></div> -->
         <img src="./images/green-yellow.png" class="color-image green-yellow" onclick="targetColorCircles(event)">
       </div>
       <div class="col-md-1 col-sm-1 col-2">
-        <!-- <div id="persian-rose"></div> -->
         <img src="./images/persian-rose.png" class="color-image persian-rose" onclick="targetColorCircles(event)">
       </div>
       <div class="col-md-1 col-sm-1 col-2">
-        <!-- <div id="fawn"></div> -->
         <img src="./images/fawn.png" class="color-image fawn" onclick="targetColorCircles(event)">
       </div>
       <div class="col-md-1 col-sm-1 col-2">
@@ -102,19 +89,15 @@
         <img src="./images/eucalyptus.png" class="color-image eucalyptus" onclick="targetColorCircles(event)">
       </div>
       <div class="col-md-1 col-sm-1 col-2">
-        <!-- <div id="scarpa-flow"></div> -->
         <img src="./images/scarpa-flow.png" class="color-image scarpa-flow" onclick="targetColorCircles(event)">
       </div>
       <div class="col-md-1 col-sm-1 col-2">
-        <!-- <div id="horses-neck"></div> -->
         <img src="./images/horses-neck.png" class="color-image horses-neck" onclick="targetColorCircles(event)">
       </div>
       <div class="col-md-1 col-sm-1 col-2">
-        <!-- <div id="downy"></div> -->
         <img src="./images/downy.png" class="color-image downy" onclick="targetColorCircles(event)">
       </div>
       <div class="col-md-1 col-sm-1 col-2">
-        <!-- <div id="silver"></div> -->
         <img src="./images/silver.png" class="color-image silver" onclick="targetColorCircles(event)">
       </div>
     </div>
@@ -129,7 +112,7 @@
       <div class="badge rounded-pill bg-light text-dark border border-dark col-3 col-sm-1">0</div>
       <button class="add-to-cart btn text-light bg-dark rounded-pill col-8 col-sm-6" data-bs-toggle="modal"
         data-bs-target="#exampleModal">Add To Cart</button>
-      <button class="checkout btn text-light bg-primary rounded-pill col-8 col-sm-6">Checkout</button>
+      <button class="checkout btn text-light bg-primary rounded-pill col-8 col-sm-6">Checkout Now</button>
     </div>
 
     <!-- Modal -->
@@ -137,16 +120,17 @@
       <div class="modal-dialog">
         <div class="modal-content rounded-0 p-1">
           <div class="modal-header border-0 d-flex justify-content-center">
-            <p class="modal-title small text-center" id="exampleModalLabel">Please add the quantity of the items you have selected</p>
+            <p class="modal-title small text-center" id="exampleModalLabel">Please add the quantity of the items you
+              have selected</p>
           </div>
           <div class="modal-body d-flex align-items-center justify-content-center">
-            <span class="chosen-color small"></span>
+            <span class="current-color small"></span>
             <img src="./images/minus.png" alt="minus" class="minus mx-4">
-            <span class="selected-total fs-2">0</span>
+            <span class="modal-quantity fs-2">0</span>
             <img src="./images/plus.png" alt="plus" class="plus mx-4">
           </div>
           <div class="modal-footer border-0">
-            <button type="button" class="agree btn btn-primary px-2 col-3" data-bs-dismiss="modal">Agree</button>
+            <button type="button" class="agree-button btn btn-primary px-2 col-3" data-bs-dismiss="modal">Agree</button>
             <button type="button" class="btn btn-danger px-2 col-3" data-bs-dismiss="modal">Cancel</button>
           </div>
         </div>
@@ -158,7 +142,7 @@
     <div id="details" class="">
       <p class="small">DETAILS</p>
       <div id="color-circles" class="details row">
-        
+
       </div>
     </div>
 
