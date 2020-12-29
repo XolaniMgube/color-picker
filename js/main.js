@@ -8,7 +8,6 @@ let total = 0;
 let agreeBtn = document.querySelector(".agree-button");
 let checkoutBtn = document.querySelector(".checkout");
 let addToCartBtn = document.querySelector(".add-to-cart");
-let details = document.querySelector(".details");
 
 // Function that targets the clicked color circles and changes relatives labels to the name of the clicked color
 let targetColorCircles = (event) => {
@@ -27,17 +26,18 @@ let targetColorCircles = (event) => {
 };
 
 // Event listeners to adding and subtracting the quantity of the color on modal
-let plusMinus = () => {
+let quantityControl = () => {
   let modalQuantity = document.querySelector(".modal-quantity");
-  let minus = document.querySelector(".minus");
-  let plus = document.querySelector(".plus");
-  plus.addEventListener("click", () => {
+  let decrement = document.querySelector(".decrement");
+  let increment = document.querySelector(".increment");
+
+  increment.addEventListener("click", () => {
     total++;
     modalQuantity.innerText = total;
   });
 
-  minus.addEventListener("click", () => {
-    total <= 0 ? (total = 0) : total--;
+  decrement.addEventListener("click", () => {
+    total <= 0 ? (total = 0) : total--; // Ternary operator for quantity to not be less than zero
     modalQuantity.innerText = total;
   });
 };
@@ -46,26 +46,32 @@ let plusMinus = () => {
 let agreeFunc = () => {
   agreeBtn.addEventListener("click", () => {
     let customFitQuantity = document.querySelector(".badge");
+    let checkoutColor = currentColor[0].innerText.toLowerCase();
+    let details = document.querySelector(".details");
+
     customFitQuantity.innerText = total;
     addToCartBtn.style.display = "none";
     checkoutBtn.style.display = "block";
+
+    for (let x = 0; x < total; x++) {
+      details.innerHTML += ` <div class="col-md-1 col-sm-1 col-2"> 
+        <img src="./images/${checkoutColor}.png" class="color-image ${checkoutColor}">
+      </div>`; // Adding circles to the details section
+    }
   });
 };
 
+// Event listner for the checkout button
 let checkoutFunc = () => {
   checkoutBtn.addEventListener("click", () => {
     let checkoutColor = currentColor[0].innerText.toLowerCase();
-    for (let x = 0; x < total; x++) {
-      details.innerHTML += ` <div class="col-md-1 col-sm-1 col-2">
-        <img src="./images/${checkoutColor}.png" class="color-image ${checkoutColor}" onclick="targetColorCircles(event)">
-      </div>`;
-    }
-    checkoutBtn.style.display = "none";
+    alert(`You have purchased ${total} ${checkoutColor} circles for`);
+    location.reload();
   });
 };
 
 let functionCalls = () => {
-  plusMinus();
+  quantityControl();
   agreeFunc();
   checkoutFunc();
 };
