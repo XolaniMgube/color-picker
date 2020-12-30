@@ -111,7 +111,8 @@
       <div class="badge rounded-pill bg-light text-dark border border-dark col-3 col-sm-1">0</div>
       <button class="add-to-cart btn text-light bg-dark rounded-pill col-8 col-sm-6" data-bs-toggle="modal"
         data-bs-target="#exampleModal">Add To Cart</button>
-      <button class="checkout btn text-light bg-dark rounded-pill col-8 col-sm-6">Checkout Now</button>
+      <button class="checkout btn text-light bg-dark rounded-pill col-8 col-sm-6" data-bs-toggle="modal"
+        data-bs-target="#summary-modal">Checkout Now</button>
     </div>
 
     <!-- Modal -->
@@ -136,10 +137,6 @@
       </div>
     </div>
 
-    <!-- Button trigger modal -->
-    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#summary-modal">
-      Launch demo modal
-    </button>
 
     <!--Summary Modal -->
     <div class="modal fade" id="summary-modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -150,7 +147,25 @@
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
-            ...
+            <table class="table">
+              <thead>
+                <tr>
+                  <th scope="col">Item Prev</th>
+                  <th scope="col">Color Name</th>
+                  <th scope="col">Price</th>
+                </tr>
+              </thead>
+              <tbody>
+          
+              </tbody>
+              <thead>
+                <tr>
+                  <th>Total Price</th>
+                  <th></th>
+                  <th>R500</th>
+                </tr>
+              </thead>
+            </table>
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>

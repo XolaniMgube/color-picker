@@ -61,22 +61,13 @@ let quantityControl = () => {
   });
 };
 
+
+
 // Event listener for the Agree Button
 let agreeFunc = () => {
   agreeBtn.addEventListener("click", () => {
-    let customFitQuantity = document.querySelector(".badge");
-    let checkoutColor = currentColor[0].innerText.toLowerCase();
-    let details = document.querySelector(".details");
-
-    for (let x = 0; x < modalQuantity.innerText; x++) {
-      details.innerHTML += ` <div class="col-md-1 col-sm-1 col-2"> 
-        <img src="./images/${checkoutColor}.png" class="details-circles ${checkoutColor}">
-      </div>`; // Adding circles to the details section
-    }
-    let detailsLength = document.querySelectorAll(".details-circles").length;
-    customFitQuantity.innerText = detailsLength;
-    addToCartBtn.style.display = "none";
-    checkoutBtn.style.display = "block";
+    addDetailsCircles();
+    toggleButtons()
   });
 };
 
@@ -92,8 +83,13 @@ addToCart();
 let checkoutFunc = () => {
   checkoutBtn.addEventListener("click", () => {
     let checkoutColor = currentColor[0].innerText.toLowerCase();
-    alert(`You have purchased ${total} ${checkoutColor} circles for`);
-    location.reload();
+    let modalTable = document.querySelector("#summary-modal tbody");
+
+    modalTable.innerHTML += `<tr>
+                  <td><img src="./images/${checkoutColor}.png" style="width: 20px;"></td>
+                  <td>${checkoutColor}</td>
+                  <td>R10</td>
+                </tr>`;
   });
 };
 
