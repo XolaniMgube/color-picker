@@ -15,6 +15,7 @@ let specialPrice = document.querySelector("#special-price");
 let details = document.querySelector(".details");
 let customFitQuantity = document.querySelector(".badge");
 let modalTable = document.querySelector("#summary-modal tbody");
+let grandTotal = document.querySelector(".grand-total")
 
 // Function that targets the clicked color circles and changes relatives labels to the name of the clicked color
 const targetColorCircles = (event) => {
@@ -64,6 +65,10 @@ const calcPrice = () => {
 };
 
 
+
+
+
+
 // Adds circles to the details section
 const addDetailsCircles = () => {
   let checkoutColor = currentColor[0].innerText.toLowerCase();
@@ -83,14 +88,17 @@ const toggleButtons = () => {
 };
 
 
+
+
 const addToSummaryTable = () => {
   let checkoutColor = currentColor[0].innerText.toLowerCase();
   modalTable.innerHTML += `<tr>
-      <td><img src="./images/${checkoutColor}.png" style="width: 20px;"></td>
-      <td class="not-bold">${checkoutColor}</td>
-      <td class="product-total not-bold"></td>
+      <td class="fw-normal small"><img src="./images/${checkoutColor}.png" style="width: 20px;">  ${checkoutColor}</td>
+      <td class="fw-normal checkout-quantity">${modalQuantity.innerText}</td>
+      <td class="product-total fw-normal">${specialPrice.innerText * modalQuantity.innerText}</td>
     </tr>`;
 };
+
 
 
 
@@ -99,6 +107,7 @@ const addToSummaryTable = () => {
 // Event listener for the Agree Button
 let agreeFunc = () => {
   agreeBtn.addEventListener("click", () => {
+    
     addDetailsCircles();
     toggleButtons();
     addToSummaryTable();
