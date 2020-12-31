@@ -15,7 +15,9 @@ let specialPrice = document.querySelector("#special-price");
 let details = document.querySelector(".details");
 let customFitQuantity = document.querySelector(".badge");
 let modalTable = document.querySelector("#summary-modal tbody");
+
 let grandTotal = document.querySelector(".grand-total")
+let arrArr = []
 
 // Function that targets the clicked color circles and changes relatives labels to the name of the clicked color
 const targetColorCircles = (event) => {
@@ -92,12 +94,29 @@ const toggleButtons = () => {
 
 const addToSummaryTable = () => {
   let checkoutColor = currentColor[0].innerText.toLowerCase();
+  let singleProductTotal = (specialPrice.innerText * modalQuantity.innerText).toFixed(2)
   modalTable.innerHTML += `<tr>
       <td class="fw-normal small"><img src="./images/${checkoutColor}.png" style="width: 20px;">  ${checkoutColor}</td>
       <td class="fw-normal checkout-quantity">${modalQuantity.innerText}</td>
-      <td class="product-total fw-normal">${specialPrice.innerText * modalQuantity.innerText}</td>
+      <td class="product-total fw-normal">R ${singleProductTotal}</td>
     </tr>`;
+    arrArr.push(singleProductTotal)
+    console.log(arrArr)
 };
+
+
+
+const finalTotal = () => {
+  checkoutBtn.addEventListener('click', () => {
+    let sum = 0
+    for (let p = 0; p < arrArr.length; p++) {
+      sum += parseFloat(arrArr[p])
+    }
+    grandTotal.innerText = `R ${sum}`
+  })
+}
+
+
 
 
 
@@ -107,7 +126,6 @@ const addToSummaryTable = () => {
 // Event listener for the Agree Button
 let agreeFunc = () => {
   agreeBtn.addEventListener("click", () => {
-    
     addDetailsCircles();
     toggleButtons();
     addToSummaryTable();
@@ -120,6 +138,8 @@ let functionCalls = () => {
   increment();
   decrement();
   agreeFunc();
+  
 };
 
 functionCalls();
+finalTotal();
