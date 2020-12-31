@@ -112,7 +112,7 @@ const finalTotal = () => {
     for (let p = 0; p < arrArr.length; p++) {
       sum += parseFloat(arrArr[p])
     }
-    grandTotal.innerText = `R ${sum}`
+    grandTotal.innerText = `R ${sum.toFixed(2)}`
   })
 }
 
